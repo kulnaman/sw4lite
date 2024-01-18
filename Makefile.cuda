@@ -23,7 +23,7 @@ else ifeq ($(findstring lassen,$(HOSTNAME)),lassen)
    FC = xlf90
    MPIPATH = $(MPI_ROOT)
    gpuarch := sm_70
-   EXTRA_LINK_FLAGS = -lmpi_ibm -L$(LAPACK_DIR) -llapack -lblas
+   EXTRA_LINK_FLAGS = -lmpi_ibm -L$(LAPACK_DIR) -llapack -lblas -lgfortran
    MPIINC = $(MPIPATH)/include
    debugdir := debug_cuda_lassen
    optdir   := optimize_cuda_lassen
@@ -32,7 +32,7 @@ else
    HOSTCOMP = gcc
    MPIPATH = $(dir $(shell which mpicc))../
    gpuarch := sm_60
-   EXTRA_LINK_FLAGS = -lmpi -llapack
+   EXTRA_LINK_FLAGS = -lmpi -llapack -lgfortran
    MPIINC = $(MPIPATH)/include
    debugdir := debug_cuda
    optdir   := optimize_cuda

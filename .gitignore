@@ -11,7 +11,7 @@ build/
 
 *.synctex.gz
 
-optimize/
+optimize*/
 
 /optimize_cuda/
 
