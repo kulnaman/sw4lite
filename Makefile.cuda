@@ -19,14 +19,14 @@ else ifeq ($(findstring surface,$(HOSTNAME)),surface)
    optdir   := optimize_cuda_surface
 else ifeq ($(findstring lassen,$(HOSTNAME)),lassen)
    NVCC = nvcc
-   HOSTCOMP = xlc++
+   HOSTCOMP = g++
    FC = xlf90
    MPIPATH = $(MPI_ROOT)
    gpuarch := sm_70
    EXTRA_LINK_FLAGS = -lmpi_ibm -L$(LAPACK_DIR) -llapack -lblas -lgfortran
    MPIINC = $(MPIPATH)/include
-   debugdir := debug_cuda_lassen
-   optdir   := optimize_cuda_lassen
+   debugdir := debug_lassen
+   optdir   := install_lassen
 else
    NVCC = nvcc
    HOSTCOMP = gcc

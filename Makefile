@@ -128,6 +128,8 @@ else ifeq ($(findstring lassen,$(HOSTNAME)),lassen)
   openmp = yes
   debug = no
   computername := lassen
+   debugdir := debug_lassen_cpu
+   optdir   := install_lassen_cpu
 else
   FC  = mpif90
   CXX = mpic++

@@ -26,6 +26,8 @@ debug_cuda_surface/
 *.o
 
 *.make
-
+build**
+install**
+!build.sh
 # emacs autosave files
 *~
