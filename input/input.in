@@ -19,8 +19,8 @@
 # the time dependency being the Gaussian function
 #
 grid h=100 x=30000 y=30000 z=17000
-time t=3000
-fileio path=loh1-h100-results
+time t=100
+fileio path=input.in
 
 # the developer line is to get the reversed c-order in sw4lite
 developer checkfornan=0 reporttiming=1 corder=1
